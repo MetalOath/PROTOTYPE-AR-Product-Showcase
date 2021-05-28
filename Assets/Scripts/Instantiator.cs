@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Instantiator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    //// Start is called before the first frame update
+    //void Start()
+    //{
         
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
+    //}
+
+    public void InstaitateElement(GameObject prefab)
+    {
+        GameObject prefabSpawn = Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
     }
 }
