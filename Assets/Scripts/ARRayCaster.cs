@@ -23,10 +23,7 @@ public class ARRayCaster : MonoBehaviour
 
     private void Update()
     {
-        if (!aRAnchor)
-        {
-            PerformARRaycast();
-        }
+        PerformARRaycast();
     }
     public void PerformARRaycast()
     {
@@ -35,6 +32,8 @@ public class ARRayCaster : MonoBehaviour
         if (!aRAnchor)
         {
             hitARPlane = manager.Raycast(new Vector2(0f, 0f), raycastHitList, TrackableType.All);
+            
+            onBegan?.Invoke();
         }
         else
         {
